@@ -1,19 +1,45 @@
 // pages/mainpage/mainpage.js
+const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    isNightMode : app.globalData.isNightMode ,
+    titleSrc : "https://ooo.0x0.ooo/2023/11/14/OeE5OL.png",
+    logoSrc :"../img/logo.png",
+    daymodeSrc :"https://ooo.0x0.ooo/2023/11/14/OeL3zs.png",
+    nightmodeSrc :"https://ooo.0x0.ooo/2023/11/14/OeLCPK.png",
+    historySrc: "https://ooo.0x0.ooo/2023/11/14/OeEBNi.png",
+    searchSrc :"https://ooo.0x0.ooo/2023/11/14/OeETLX.png",
+    animationData: {} 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
-
+    this.animation = wx.createAnimation({
+      duration: 600, // 动画时长，单位ms
+      timingFunction: 'ease', // 动画效果
+   });
   },
+  toggleNightMode: function(){
+    this.animation.translateY(-110).step(); // -30px为滑动的距离，可以根据需要调整
+    // 更新动画数据
+    this.setData({
+        animationData: this.animation.export()
+    });
+    // 将动画恢复到原位置，准备下一次动画
+    setTimeout(() => {
+    // 音乐播放与暂停逻辑
+    if (app.globalData.isNightMode) {
+      this.setData({ isNightMode: false });
+       app.globalData.isNightMode = false;
+     } else {
+      this.setData({ isNightMode: true });
+      app.globalData.isNightMode = true;
+     }
+      this.animation.translateY(0).step({ duration: 800 });
+      this.setData({
+        animationData: this.animation.export()
+      });
+    }, 500); // 500ms是动画的时长
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

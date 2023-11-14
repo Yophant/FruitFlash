@@ -1,2 +1,5 @@
-<!--pages/mainpage/mainpage.wxml-->
-<text>pages/mainpage/mainpage.wxml</text>
+<view class="titlecontainer">
+  <image class="logo" src="{{logoSrc}}" mode="widthFix"></image>
+  <image class="title" src="{{titleSrc}}" mode="widthFix"></image>
+</view>
+<image class="nightmode" src="{{isNightMode ? 'https://ooo.0x0.ooo/2023/11/14/OeLCPK.png' : 'https://ooo.0x0.ooo/2023/11/14/OeL3zs.png'}}" bindtap="toggleNightMode" mode="widthFix" animation="{{animationData}}"/>

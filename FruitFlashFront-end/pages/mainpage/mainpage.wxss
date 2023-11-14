@@ -1,1 +1,23 @@
-/* pages/mainpage/mainpage.wxss */
+.titlecontainer{
+  display: flex;
+  position :absolute ;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 700rpx;
+  left: 20rpx;
+  top:-125rpx;
+}
+.title{
+  width: 1300rpx;
+}
+.logo{
+  width: 350rpx
+}
+
+.nightmode{
+  width: 150rpx;
+  position: absolute;
+  left: 550rpx;
+  top:40rpx;
+}

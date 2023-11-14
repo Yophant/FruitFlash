@@ -2,6 +2,7 @@
 App({
   onLaunch() {
     // 展示本地存储能力
+    this.globalData.isNightMode = false ;
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
@@ -14,6 +15,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    isNightMode : false
   }
 })
