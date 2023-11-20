@@ -1,17 +1,23 @@
 {
   "pages":[
     "pages/mainpage/mainpage",
+    "pages/search/search",
+    "pages/webview/webview",
+    "pages/findresult/findresult",
     "pages/index/index",
     "pages/logs/logs",
     "pages/scanresult/scanresult",
-    "pages/search/search",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/compare/compare"
+  ],
+  "webviewDomain": [
+    "https://www.baidu.com"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#CCCC99",
+    "navigationBarTitleText": "FruitFlash",
+    "navigationBarTextStyle":"white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

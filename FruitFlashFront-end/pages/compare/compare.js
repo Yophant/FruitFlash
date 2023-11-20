@@ -11,6 +11,16 @@ Page({
     searchSrc :"https://ooo.0x0.ooo/2023/11/14/OeETLX.png",
     searchBoxSrc:"https://ooo.0x0.ooo/2023/11/17/OelqHS.png",
     backSrc:"https://ooo.0x0.ooo/2023/11/17/Oel5XN.png",
+    findresultSrc:"https://ooo.0x0.ooo/2023/11/18/Oe2qHI.png",
+    orangeSrc:"https://ooo.0x0.ooo/2023/11/18/Oe2TzF.png",
+    strawberrySrc:"https://ooo.0x0.ooo/2023/11/18/Oe2UJ6.png",
+    pearSrc:"https://ooo.0x0.ooo/2023/11/18/Oe25XD.png",
+    monkeypeachSrc:"https://ooo.0x0.ooo/2023/11/18/Oe2i7s.png",
+    typeboxSrc:"https://ooo.0x0.ooo/2023/11/18/Oe2WlP.png",
+    sugarboxSrc:"https://ooo.0x0.ooo/2023/11/18/Oe2kTb.png",
+    storagetimeSrc:"https://ooo.0x0.ooo/2023/11/18/Oe2xZl.png",
+    storagemethodSrc:"https://ooo.0x0.ooo/2023/11/18/Oe2zcg.png",
+    compareSrc:"https://ooo.0x0.ooo/2023/11/21/Orz98I.png",
     searchText: '' ,
     animationData: {} 
   },
@@ -34,8 +44,7 @@ Page({
       const encodedSearchText = encodeURIComponent(searchText);
       // 打开新页面，跳转到百度搜索结果
       wx.navigateTo({
-        // url: `/pages/webview/webview?url=https://www.baidu.com/s?wd=${encodedSearchText}`
-        url:"/pages/findresult/findresult"
+        url: `/pages/webview/webview?url=https://www.baidu.com/s?wd=${encodedSearchText}`
       });
     }
   },
@@ -66,7 +75,11 @@ Page({
       delta: 1
     })
   },
-
+  redirectToCompare: function() {
+    wx.navigateTo({
+      url: '/pages/compare/compare',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

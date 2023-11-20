@@ -7,7 +7,7 @@ Page({
     logoSrc :"../img/logo.png",
     daymodeSrc :"https://ooo.0x0.ooo/2023/11/14/OeL3zs.png",
     nightmodeSrc :"https://ooo.0x0.ooo/2023/11/14/OeLCPK.png",
-    historySrc: "https://ooo.0x0.ooo/2023/11/14/OeEBNi.png",
+    historySrc: "https://ooo.0x0.ooo/2023/11/17/Oefdfr.png",
     searchSrc :"https://ooo.0x0.ooo/2023/11/14/OeETLX.png",
     animationData: {} 
   },
@@ -39,7 +39,16 @@ Page({
       });
     }, 500); // 500ms是动画的时长
   },
-
+  redirectToHistory: function() {
+    wx.navigateTo({
+      url: '/pages/history/history',
+    })
+  },
+  redirectToSearch: function() {
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -52,7 +61,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.setData({
+      isNightMode : app.globalData.isNightMode
+  });
   },
 
   /**

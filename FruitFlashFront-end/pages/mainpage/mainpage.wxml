@@ -1,5 +1,12 @@
-<view class="titlecontainer">
-  <image class="logo" src="{{logoSrc}}" mode="widthFix"></image>
-  <image class="title" src="{{titleSrc}}" mode="widthFix"></image>
-</view>
-<image class="nightmode" src="{{isNightMode ? 'https://ooo.0x0.ooo/2023/11/14/OeLCPK.png' : 'https://ooo.0x0.ooo/2023/11/14/OeL3zs.png'}}" bindtap="toggleNightMode" mode="widthFix" animation="{{animationData}}"/>
+
+  <view class="{{isNightMode ? 'titlecontainer1' : 'titlecontainer2'}}">
+    <image class="logo" src="{{logoSrc}}" mode="widthFix"></image>
+    <image class="title" src="{{titleSrc}}" mode="widthFix"></image>
+  </view>
+
+<image class="{{isNightMode ? 'nightmode' : 'daymode'}}" src="{{isNightMode ? 'https://ooo.0x0.ooo/2023/11/14/OeLCPK.png' : 'https://ooo.0x0.ooo/2023/11/14/OeL3zs.png'}}" bindtap="toggleNightMode" mode="widthFix" animation="{{animationData}}"/>
+<image class="history" src="{{historySrc}} " mode="widthFix" bind:tap="redirectToHistory"></image>
+<image class="search" src="{{searchSrc}}" mode="widthFix" bind:tap="redirectToSearch"></image>
+
+
+
